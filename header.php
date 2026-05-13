@@ -5,7 +5,7 @@
 
     $smjerovi = Smjer::dohvatiSve();
     if (empty($smjerovi)) {
-        for ($i = 1; $i <= 30; $i++) {
+        for ($i = 1; $i <= 3; $i++) {
             try {
                 $smjer = new Smjer("Smjer $i", rand(1,5), true);
                 $smjer->spremi();

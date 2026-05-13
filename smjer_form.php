@@ -11,8 +11,8 @@
 
 
         $naziv = $_POST["naziv"];
-        $tajanje = $_POST["tajanje"];
-        $aktivan = $_POST["aktivan"];
+        $tajanje = $_POST["trajanjeGodina"];
+        $aktivan = isset($_POST["aktivan"]);
 
         $smjer = new Smjer($naziv, $tajanje, $aktivan);
         $smjer->spremi();
