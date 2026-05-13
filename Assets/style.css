@@ -1,0 +1,383 @@
+:root {
+    --background-color: #464646;
+    --secundary-color: #282828;
+}
+
+html {
+    display: block;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: var(--background-color);
+}
+
+nav {
+    background-color: var(--secundary-color);
+    padding: 16px 32px;
+    border-radius: 0 0 12px 12px;
+    border-bottom: #00bcd4 solid 1px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+    justify-content: space-evenly;
+}
+
+.nav-menu li {
+    position: relative;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 16px 18px;
+    display: block;
+    border-radius: 16px;
+}
+
+.nav-menu a:hover {
+    color: #00bcd4;
+    background-color: var(--background-color);
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown > a.not-link {
+    cursor: default;
+    pointer-events: none;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%); /* centriranje */
+    background-color: var(--secundary-color);
+    list-style: none;
+    margin: 0;
+    padding: 8px 0;
+    min-width: 200px;
+    border: 1px solid #00bcd4;
+    border-top: none;
+    border-radius: 10px;
+
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.25s ease;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-menu li a {
+    font-size: 16px;
+    padding: 10px 16px;
+    white-space: nowrap;
+    text-align: center;
+    display: block;
+    color: white;
+}
+
+.dropdown-menu li a:hover {
+    background-color: var(--background-color);
+    color: #00bcd4;
+}
+
+.dropdown > a.not-link {
+    cursor: default;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.dropdown:hover > a.not-link {
+    color: #00bcd4;
+}
+
+.arrow {
+    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    transition: transform 0.25s ease;
+}
+
+.dropdown:hover .arrow {
+    transform: rotate(180deg);
+}
+
+.dashboard-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    margin-top: 30px;
+}
+
+.dashboard-card {
+    border: 1px solid #00bcd4;
+    border-radius: 15px;
+    padding: 40px;
+    width: 90%;
+    max-width: 520px;
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.dashboard-card h1 {
+    margin: 0 0 32px;
+    font-size: 38px;
+    color: white;
+}
+
+.stat-box {
+    background-color: var(--background-color);
+    border-radius: 16px;
+    padding: 28px 20px;
+    border: 1px solid rgba(0, 188, 212, 0.4);
+}
+
+.stat-box h2 {
+    margin: 0 0 16px;
+    font-size: 22px;
+    font-weight: 500;
+    color: white;
+}
+
+.number-of-students {
+    margin: 0;
+    font-size: 64px;
+    font-weight: bold;
+    color: #00bcd4;
+}
+
+main {
+    flex: 1;
+}
+
+/* FORMA */
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.form-card {
+    background-color: var(--secundary-color);
+    border: 1px solid #00bcd4;
+    border-radius: 18px;
+    padding: 40px;
+    width: 90%;
+    max-width: 520px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.form-card h1 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 32px;
+    color: white;
+}
+
+.form-card form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-card label {
+    margin-bottom: 8px;
+    color: whitesmoke;
+    font-size: 16px;
+}
+
+.form-card input {
+    margin-bottom: 18px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid #555;
+    background-color: var(--background-color);
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+.form-card input:focus {
+    border-color: #00bcd4;
+}
+
+.form-card button {
+    width: 100%;
+    margin-top: 12px;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background-color: #00bcd4;
+    color: #222;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.form-card button:hover {
+    background-color: white;
+}
+
+.form-card input,
+.form-card select {
+    margin-bottom: 18px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid #555;
+    background-color: var(--background-color);
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+.form-card input:focus,
+.form-card select:focus {
+    border-color: #00bcd4;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 36px;
+    color: whitesmoke;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.checkbox-label input {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    accent-color: #00bcd4;
+    cursor: pointer;
+}
+
+
+/* KRAJ FORMA */
+
+/* POČETAK TABLE */
+
+.pregled {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px 20px;
+    height: 100%;
+    overflow: auto;
+}
+
+.table-card {
+    width: 90%;
+    background-color: var(--secundary-color);
+    border: 1px solid #00bcd4;
+    border-radius: 18px;
+    padding: 36px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.table-card h1 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 28px;
+    color: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    height: auto;
+    box-shadow: 0 0 12px rgb(0 188 212 / 0.6);;
+}
+
+thead {
+    background-color: #00bcd4;
+    color: #222;
+}
+
+th,
+td {
+    padding: 14px 16px;
+    text-align: center;
+    border-bottom: 1px solid #444;
+}
+
+tbody tr {
+    background-color: var(--background-color);
+}
+
+.even-row {
+    background-color: var(--background-color);
+}
+.odd-row {
+    background-color: var(--secundary-color);
+}
+
+
+.status {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.status.active {
+    color: #00bcd4;
+    border: 1px solid #00bcd4;
+    background-color: rgba(0, 188, 212, 0.15);
+}
+
+.status.inactive {
+    color: #ff5c5c;
+    border: 1px solid #ff5c5c;
+    background-color: rgba(255, 92, 92, 0.15)
+}
+
+/* KRAJ TABLE */
+
+footer {
+    background-color: var(--secundary-color);
+    border-top: 1px solid #00bcd4;
+    padding: 18px 20px;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 15px;
+    border-radius: 16px 16px 0 0;
+}
+
+footer p {
+    margin: 0;
+}
