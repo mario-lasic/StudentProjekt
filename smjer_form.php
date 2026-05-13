@@ -22,6 +22,7 @@
             $greska = $e->getMessage();
         }
     }
+    Smjer::redirect("pregled_smjerova.php");
 ?>
 <main class="form-container">
     <section class="form-card">
