@@ -1,6 +1,6 @@
 :root {
-    --background-color: #464646;
-    --secundary-color: #282828;
+    --background-color: #f3f4f6;
+    --secundary-color: #ffffff;
 }
 
 html {
@@ -14,15 +14,17 @@ body {
     flex-direction: column;
     margin: 0;
     font-family: Arial, sans-serif;
-    color: white;
+    color: #111827;
     background-color: var(--background-color);
 }
+
+/* Početak Navigacija */
 
 nav {
     background-color: var(--secundary-color);
     padding: 16px 32px;
     border-radius: 0 0 12px 12px;
-    border-bottom: #00bcd4 solid 1px;
+    border-bottom: #2563eb solid 1px;
 }
 
 .nav-menu {
@@ -39,7 +41,7 @@ nav {
 }
 
 .nav-menu a {
-    color: white;
+    color: #111827;
     text-decoration: none;
     font-size: 18px;
     padding: 16px 18px;
@@ -48,7 +50,7 @@ nav {
 }
 
 .nav-menu a:hover {
-    color: #00bcd4;
+    color: #2563eb;
     background-color: var(--background-color);
 }
 
@@ -65,13 +67,13 @@ nav {
     position: absolute;
     top: 100%;
     left: 50%;
-    transform: translateX(-50%); /* centriranje */
+    transform: translateX(-50%);
     background-color: var(--secundary-color);
     list-style: none;
     margin: 0;
     padding: 8px 0;
     min-width: 200px;
-    border: 1px solid #00bcd4;
+    border: 1px solid #2563eb;
     border-top: none;
     border-radius: 10px;
 
@@ -92,12 +94,12 @@ nav {
     white-space: nowrap;
     text-align: center;
     display: block;
-    color: white;
+    color: #111827;
 }
 
 .dropdown-menu li a:hover {
     background-color: var(--background-color);
-    color: #00bcd4;
+    color: #2563eb;
 }
 
 .dropdown > a.not-link {
@@ -109,7 +111,7 @@ nav {
 }
 
 .dropdown:hover > a.not-link {
-    color: #00bcd4;
+    color: #2563eb;
 }
 
 .arrow {
@@ -125,6 +127,8 @@ nav {
     transform: rotate(180deg);
 }
 
+/* Kraj Navigacija */
+
 .dashboard-container {
     display: flex;
     justify-content: center;
@@ -134,40 +138,40 @@ nav {
 }
 
 .dashboard-card {
-    border: 1px solid #00bcd4;
+    border: 1px solid #2563eb;
     border-radius: 15px;
     padding: 40px;
     width: 90%;
     max-width: 520px;
     text-align: center;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
 .dashboard-card h1 {
     margin: 0 0 32px;
     font-size: 38px;
-    color: white;
+    color: #111827;
 }
 
 .stat-box {
     background-color: var(--background-color);
     border-radius: 16px;
     padding: 28px 20px;
-    border: 1px solid rgba(0, 188, 212, 0.4);
+    border: 1px solid rgba(37, 99, 235, 0.4);
 }
 
 .stat-box h2 {
     margin: 0 0 16px;
     font-size: 22px;
     font-weight: 500;
-    color: white;
+    color: #111827;
 }
 
 .number-of-students {
     margin: 0;
     font-size: 64px;
     font-weight: bold;
-    color: #00bcd4;
+    color: #2563eb;
 }
 
 main {
@@ -176,11 +180,11 @@ main {
 
 /* FORMA */
 .error {
-    color: red;
+    color: #dc2626;
 }
 
 .success {
-    color: green;
+    color: #16a34a;
 }
 
 .form-container {
@@ -192,19 +196,19 @@ main {
 
 .form-card {
     background-color: var(--secundary-color);
-    border: 1px solid #00bcd4;
+    border: 1px solid #2563eb;
     border-radius: 18px;
     padding: 40px;
     width: 90%;
     max-width: 520px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
 .form-card h1 {
     text-align: center;
     margin-top: 0;
     margin-bottom: 32px;
-    color: white;
+    color: #111827;
 }
 
 .form-card form {
@@ -214,7 +218,7 @@ main {
 
 .form-card label {
     margin-bottom: 8px;
-    color: whitesmoke;
+    color: #374151;
     font-size: 16px;
 }
 
@@ -222,15 +226,15 @@ main {
     margin-bottom: 18px;
     padding: 12px 14px;
     border-radius: 10px;
-    border: 1px solid #555;
+    border: 1px solid #cbd5e1;
     background-color: var(--background-color);
-    color: white;
+    color: #111827;
     font-size: 16px;
     outline: none;
 }
 
 .form-card input:focus {
-    border-color: #00bcd4;
+    border-color: #2563eb;
 }
 
 .form-card button {
@@ -239,15 +243,15 @@ main {
     padding: 14px;
     border: none;
     border-radius: 12px;
-    background-color: #00bcd4;
-    color: #222;
+    background-color: #2563eb;
+    color: #ffffff;
     font-size: 17px;
     font-weight: bold;
     cursor: pointer;
 }
 
 .form-card button:hover {
-    background-color: white;
+    background-color: #1d4ed8;
 }
 
 .form-card input,
@@ -255,16 +259,16 @@ main {
     margin-bottom: 18px;
     padding: 12px 14px;
     border-radius: 10px;
-    border: 1px solid #555;
+    border: 1px solid #cbd5e1;
     background-color: var(--background-color);
-    color: white;
+    color: #111827;
     font-size: 16px;
     outline: none;
 }
 
 .form-card input:focus,
 .form-card select:focus {
-    border-color: #00bcd4;
+    border-color: #2563eb;
 }
 
 .checkbox-label {
@@ -272,7 +276,7 @@ main {
     align-items: center;
     gap: 10px;
     margin-bottom: 36px;
-    color: whitesmoke;
+    color: #374151;
     font-size: 16px;
     cursor: pointer;
 }
@@ -281,7 +285,7 @@ main {
     width: 18px;
     height: 18px;
     margin: 0;
-    accent-color: #00bcd4;
+    accent-color: #2563eb;
     cursor: pointer;
 }
 
@@ -302,36 +306,36 @@ main {
 .table-card {
     width: 90%;
     background-color: var(--secundary-color);
-    border: 1px solid #00bcd4;
+    border: 1px solid #2563eb;
     border-radius: 18px;
     padding: 36px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
 .table-card h1 {
     text-align: center;
     margin-top: 0;
     margin-bottom: 28px;
-    color: white;
+    color: #111827;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
     height: auto;
-    box-shadow: 0 0 12px rgb(0 188 212 / 0.6);;
+    box-shadow: 0 0 12px rgb(37 99 235 / 0.35);;
 }
 
 thead {
-    background-color: #00bcd4;
-    color: #222;
+    background-color: #2563eb;
+    color: #ffffff;
 }
 
 th,
 td {
     padding: 14px 16px;
     text-align: center;
-    border-bottom: 1px solid #444;
+    border-bottom: 1px solid #e5e7eb;
 }
 
 tbody tr {
@@ -355,25 +359,25 @@ tbody tr {
 }
 
 .status.active {
-    color: #00bcd4;
-    border: 1px solid #00bcd4;
-    background-color: rgba(0, 188, 212, 0.15);
+    color: #49eb25;
+    border: 1px solid #32eb25;
+    background-color: rgb(93 235 37 / 0.15);
 }
 
 .status.inactive {
-    color: #ff5c5c;
-    border: 1px solid #ff5c5c;
-    background-color: rgba(255, 92, 92, 0.15)
+    color: #dc2626;
+    border: 1px solid #dc2626;
+    background-color: rgba(220, 38, 38, 0.15)
 }
 
 /* KRAJ TABLE */
 
 footer {
     background-color: var(--secundary-color);
-    border-top: 1px solid #00bcd4;
+    border-top: 1px solid #2563eb;
     padding: 18px 20px;
     text-align: center;
-    color: whitesmoke;
+    color: #374151;
     font-size: 15px;
     border-radius: 16px 16px 0 0;
 }
